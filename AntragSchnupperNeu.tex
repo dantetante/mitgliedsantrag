@@ -1,0 +1,212 @@
+\documentclass[ngerman,dvips]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+%\begin{comment}
+\usepackage[%
+    driver=dvips,
+    web={pro,
+        tight,
+        german,
+        nodirectory,
+        usesf
+        },
+    eforms,
+    aebxmp,
+    attachsource={tex}
+]{aeb_pro}
+
+
+\DeclareDocInfo{
+    title=Antragsformular DANTE e.V.,
+    author=DANTE e.V.,
+    university=,
+    email=herbert@dante.de,
+    subject=,
+    keywords={Formularfelder mit eForms},
+    talksite=,
+    talkdate={March, 2014},
+    copyrightStatus=True,
+    copyrightNotice={Copyright (C) \the\year, DANTE e.V.},
+    copyrightInfoURL=http://www.dante.de
+}
+
+\DeclareInitView
+{%
+layoutmag={mag=FitWidth},%
+windowoptions={showtitle},
+}
+
+\begin{docassembly}
+\executeSave()
+\end{docassembly}
+%\end{comment}
+%\def\DANTE{{\fontfamily{dante}\selectfont DANTE}}
+\usepackage{dtklogos}
+
+%\begin{comment}
+
+\usepackage{calc}
+%\usepackage[tight,
+%            german,
+%            nodirectory,
+%            usesf,
+%            pdftex
+%            ]{web}
+\usepackage[dvips]{eforms}
+
+    \title{Antragsformular DANTE e.V.}
+    \author{DANTE e.V.}
+    \keywords{Formularfelder mit eForms}
+%\end{comment}
+
+
+
+\screensize{297mm}{210mm} % height, width
+\margins{.6in}{.6in}{.5in}{.5in}% left,right,top, bottom
+
+
+\usepackage{multicol}
+
+%% Definition des Eurosymbols
+\newcommand\eur{%
+  {\sffamily C\makebox[0pt][l]{\kern-.70em\mbox{--}}%
+  \makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}\,}}
+
+%% Fu{\ss}note in Tabelle
+\newcounter{myfootertablecounter}
+\newcommand\myfootnotemark{%
+\addtocounter{footnote}{1}%
+\footnotemark[\thefootnote]%
+}%
+\newcommand\myfootnotetext[1]{%
+\addtocounter{myfootertablecounter}{1}
+\footnotetext[\value{myfootertablecounter}]{#1}
+}
+
+\usepackage{dtklogos}
+%% Layoutparameter
+\parindent0pt
+\parskip3pt
+\pagestyle{empty}
+
+\begin{document}
+
+\hfill{\LARGE{Antrag zur Mitgliedschaft bei \dante}}
+
+\pushButton[\S{S}\BC{}\BG{}\textColor{1 0 0 rg}\F{-\FPrint}\H{N}\CA{Formular am Rechner ausf\string\374llen:
+Nutzen Sie die 'tab' Funktion Ihrer Tastatur und drucken Sie das Formular dann aus.}]{name}{\textwidth}{12bp}
+
+\fcolorbox{lightgray}{lightgray}{\parbox{\linewidth}{\itshape Die Schnuppermitgliedschaft ist eine günstige 
+Möglichkeit, \dante\ zum Preis von 15 € kennenzulernen. Der
+Beitrag für die Schnuppermitgliedschaft gilt für das laufende Kalenderjahr (1. Januar bis 31. Dezember), die
+Mitgliedschaft \textbf{endet automatisch} mit Ablauf dieses Kalenderjahres.}}
+
+\vspace{6pt}
+
+\newcounter{infoLineNum}
+\setcounter{infoLineNum}{0}
+\newcommand{\infoInput}[2][5.5in]{\stepcounter{infoLineNum}%
+    \makebox[0pt][l]{\kern4pt\raisebox{.75ex}{\textField[\W0\BC{}\BG{}\TU{#2}]{name\theinfoLineNum}{#1}{12bp}}}\dotfill}
+
+\begin{tabular}{lp{5.5in}}
+    Nachname, Vorname:\myfootnotemark   & \infoInput{Nachname, Vorname}\\[6pt]
+    Institut/Firma:                     & \infoInput{Institut/Firma}\\[6pt]
+    Stra{\ss}e:                             & \infoInput{Strasse}\\[6pt]
+    PLZ Ort:                            & \infoInput{PLZ Ort}\\[6pt]
+    Telefon:                            & \infoInput{Telefon}\\[6pt]
+    Fax:                                & \infoInput{Fax}\\[6pt]
+    E-Mail:                             & \infoInput{E-Mail}\\[6pt]
+    WWW:                                & \infoInput{WWW}
+\end{tabular}
+
+\myfootnotetext{Von Firmen, Institutionen des \"{o}ffentlichen Rechts und Forschungseinrichtungen ist hier der Name der vertretungsberechtigten
+Person anzugeben. Bitte immer nur einen Namen pro Mitgliedschaft nennen.}
+
+
+\vspace{2cm}
+Ich habe auf folgendem Weg von DANTE e.V. erfahren: \infoInput[1.75in]{DANTE ist mir schon bekannt durch}
+
+
+\bigskip
+\newcounter{checkboxcounter}
+\setcounter{checkboxcounter}{0}
+\def\firstCk{\stepcounter{checkboxcounter}\checkBox{checkbox\thecheckboxcounter}{11bp}{11bp}{ja}}
+\renewcommand{\labelitemi}{\firstCk}
+\begin{itemize}
+\item Der Beitrag wird \"{u}berwiesen.
+\item Der Beitrag wurde bereits bar entrichtet.
+\end{itemize}
+
+
+
+\vspace{1cm}
+Die Zahlungsmodalitäten sind auf der Rückseite beschrieben. Senden Sie den ausgefüllten Antrag an:
+
+\vspace{1cm}
+DANTE, Deutschsprachige Anwendervereinigung TEX e.\kern-1pt V.\\
+Postfach 10 18 40\\
+69008 Heidelberg\\
+Deutschland
+
+
+
+\vspace{1cm}
+Alle f\"{u}r das laufende Kalenderjahr bereits versandten Ausgaben der Vereinszeitung und eventuell weitere Leistungen
+wie DVD/CD-ROMs sind (solange vorr\"{a}tig) im Beitrag enthalten. Die Mitgliedschaft tritt erst nach Eingang des
+eigenh\"{a}ndig unterschriebenen Antrages und des Mitgliedsbeitrags bei DANTE e.V. in Kraft und wird durch die Zusendung
+von Mitgliedsnummer und Satzung best\"{a}tigt. Alle Dienstleistungen des Vereins k\"{o}nnen erst ab Inkrafttreten
+der Mitgliedschaft in Anspruch genommen werden.
+
+
+\vspace{22pt}
+
+\begin{minipage}{0.2\textwidth}
+\begin{center}
+\dotfill
+
+Ort
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.15\textwidth}
+\begin{center}
+\dotfill
+
+Datum
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\dotfill
+
+Unterschrift
+\end{center}
+\end{minipage}
+
+
+%% Rückseite
+\newpage
+
+\renewcommand\thesubsection{\arabic{subsection}.}
+
+\begin{flushright}
+{\Huge\DANTE} \hfill Deutschsprachige Anwendervereinigung \TeX\ \eV\\
+Bergheimer Straße 110a\\
+69115 Heidelberg
+\end{flushright}
+
+
+Folgende Bankverbindung steht zur Verfügung:
+
+Für Überweisungen aus allen Ländern:\\
+Volksbank Rhein-Neckar eG\\
+Kontonummer: 2 310 007\\
+Bankleitzahl: 670 900 00\\
+Swift: GENODE61MA2\\
+IBAN: DE67 6709 0000 0002 3100 07
+
+
+
+\end{document} 

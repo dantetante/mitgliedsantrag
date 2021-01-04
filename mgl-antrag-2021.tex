@@ -1,0 +1,237 @@
+\documentclass[12pt,ngerman,parskip]{scrartcl}
+%\documentclass[8pt,ngerman,parskip]{scrartcl}
+\usepackage[margin=1cm]{geometry}
+\usepackage{libertinus}
+\usepackage[right]{eurosym}
+\usepackage{babel}
+\usepackage{setspace}
+\usepackage[inline]{enumitem}
+\usepackage{tabularx}
+\usepackage{footnote}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\pagestyle{empty}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\Large\hfill Antrag zur Mitgliedschaft bei DANTE e.\,V.
+
+\normalsize
+
+\begin{tcolorbox}[sharp corners=all]
+\textit{\small Die mit einem Stern gekennzeichneten Angaben sind
+zwingend erforderlich,
+damit der Antrag bearbeitet werden kann.}
+\end{tcolorbox}
+
+
+\begin{savenotes}
+\begin{Form}
+
+%\renewcommand\LayoutTextField[2]{%
+%\raisebox{-\dp\strutbox}{\makebox[0pt][l]{\cleaders
+%\hbox to .44em{\hss.\hss}\hskip\csname Fld@width\endcsname}}#2}
+%s. https://tex.stackexchange.com/questions/398905/typesetting-fillable-pdf-forms-with-hyperref
+
+ \renewcommand\LayoutTextField[2]{%
+   \raisebox{-3.2pt}{\tikz[overlay]\draw[dashed](0,-0.2\dp\strutbox)--++(\csname Fld@width\endcsname,0pt);#2}}
+
+
+\begin{spacing}{1.5}
+\begin{tabularx}{\textwidth}{lX}
+*Nachname, *Vorname:\footnote{%
+Von Firmen, Institutionen des \"{o}ffentlichen Rechts und Forschungseinrichtungen
+ist hier der Name der vertretungsberechtigten
+Person anzugeben. Bitte immer nur einen Namen pro Mitgliedschaft nennen.}
+&
+\TextField[bordercolor={gray},
+backgroundcolor={},
+width=5in,]{}\\
+Institut/Firma:
+&
+\TextField[bordercolor={gray},
+width=5in,]{}\\
+*Straße:&
+\TextField[bordercolor={gray},
+backgroundcolor={},
+width=5in,]{}\\
+{\tiny evtl. weitere Adressdaten:}&
+\TextField[bordercolor={gray},
+backgroundcolor={},
+width=5in,]{}\\
+*PLZ *Ort:&
+\TextField[bordercolor={gray},
+width=5in,]{}\\
+Land (falls nicht Deutschland):&
+\TextField[bordercolor={gray},
+width=5in,]{}\\
+E-Mail:
+&
+\TextField[bordercolor={gray},
+width=5in,]{}\\
+\end{tabularx}
+
+
+\end{spacing}
+\def\LayoutCheckField#1#2{#2\quad #1}
+
+
+
+
+Die Mitgliedsbeitr"age bei Dante h"angen von der
+Mitgliedsart ab:
+\begin{itemize*}
+\item
+Firma: \EUR{150}
+\item Institut des "offentlichen Rechts oder
+Forschungseinrichtung: \EUR{65}
+\item Privatperson: \EUR{40}
+\item Privatperson ermäßigt: \EUR{20}
+\item Schüler:in: \EUR{15}
+\end{itemize*}\\
+Eine Erm"a"sigung gibt es f"ur Studierende, Renter:innen,
+Arbeitslose sowie Personen im Bundesfreiwilligendienst. Eine
+Bescheinigung hierf"ur ist -- je nach Erm"a"sigungstyp --
+einmalig oder aber
+jedes Jahr erneut vorzulegen. Sch"uler:innen m"ussen
+einen Sch"ulerausweis o.\,"a. vorlegen.
+Die Bescheinigung wird f"ur das gesamte aktuelle Kalenderjahr
+akzeptiert, auch wenn die Bescheinigung nur f"ur einen Teil
+dieses Jahres g"ultig ist.
+Bei fehlender Bescheinigung erfolgt eine nachtr"agliche
+Hochstufung in die Gruppe \emph{Privatperson}.
+
+\ChoiceMenu[combo]{%
+*Ich ordne mich der folgenden
+Mitgliedsgruppe zu:
+}{Firma,{Institut, Forschungseinrichtung}, Privatperson,
+Privatperson ermäßigt, Schüler:in}
+
+Die Mitgliedsbeitr"age gelten f"ur das laufende Kalenderjahr
+(1. Januar bis 31. Dezember). Sie erhalten jedes Jahr zu
+Jahresbeginn eine
+Rechnung "uber den Mitgliedsbeitrag f"ur das aktuelle Jahr und
+eine Zuwendungsbescheinigung f"ur das vergangene Jahr,
+normalerweise per Post. Abweichend hiervon k"onnen Sie
+w"ahlen:\\
+\CheckBox[]{%
+Ich m"ochte die Rechnung und Zuwendungsbescheinigung nur per E-Mail
+erhalten.}\\
+\CheckBox[]{%
+Ich m"ochte die Rechnung und Zuwendungsbescheinigung
+zus"atzlich
+auch per E-Mail erhalten.}
+
+
+Den Mitgliedsbeitrag k"onnen Sie entweder selbst "uberweisen
+oder uns ein SEPA-Lastschriftmandat erteilen:\\
+\CheckBox[]{%
+Ich werde den Beitrag jeweils nach Erhalt der Rechnung
+selbst "uberweisen.}\\
+\CheckBox[]{%
+Ich m"ochte am Lastschriftverfahren teilnehmen. Die
+Einzugserm"achtigung (zu finden hier:
+\url{urlwodassepadingsliegenwird}) habe ich ausgef"ullt,
+h"andisch unterschrieben
+und per Post an das Danteb"uro geschickt.}
+
+Alle f"ur das laufende Kalenderjahr bereits versandten
+Ausgaben der Vereinszeitung und eventuell weitere Leistungen
+(z.\,B. der Datentr"ager der \TeX-Collection, zur Zeit noch eine
+DVD) sind im Beitrag enthalten. Die Mitgliedschaft tritt
+erst nach Eingang des eigenh"andig unterschriebenen Antrages
+und des Mitgliedsbeitrags bei Dante e.\,V. in Kraft und wird
+durch Zusendung von Mitgliedsnummer und Satzung best"atigt.
+Alle Dienstleistungen des Vereins k"onnen erst ab
+Inktafttreten der Mitgliedschaft in Anspruch genommen
+werden.
+
+\CheckBox[]{*Die Satzung (\url{linkzursatzung}) habe ich
+gelesen und erkenne sie an.}
+
+\CheckBox[]{*Ich habe die Datenschutzerkl"arung (siehe
+unten) gelesen und
+akzeptiere sie.}
+
+\bigskip
+
+*Ort, *Datum: \TextField[bordercolor={gray}, width=.35\textwidth,]{}
+*Unterschrift: \underline{\hspace*{.35\textwidth}}
+
+\bigskip
+
+Senden Sie den ausgef"ullten Antrag an:
+Dante e.\,V.,
+Postfach 11\,03\,61,
+69072 Heidelberg,
+Deutschland\\
+
+\bigskip
+
+Ich habe auf folgendem Weg von Dante e.\,V. erfahren:\\
+\TextField[%bordercolor={},
+width=\textwidth,]
+{}\\
+
+\CheckBox{%
+%\CheckBox[multiline=true]{%
+Ich m"ochte mit der von mir angegebenen E-Mail-Adresse in die
+vereinsinterne und geschlossene Kommunikationsliste
+\texttt{dante-ev@dante.de} aufgenommen werden.}
+
+\end{Form}
+\end{savenotes}
+
+\vfill
+
+\begin{spacing}{1.2}
+\begin{tcolorbox}
+[sharp corners=all,
+title={\Large Informationen zum Datenschutz
+entsprechend Art. 13 DSGVO}]
+\begin{itemize}[nosep]
+\item Verantwortlich ist:\\
+Dante e.\,V., Bergheimerstr. 110A, 69115 Heidelberg;
+Vertreten durch den Vorstand; Kontakt:
+\mbox{\texttt{office@dante.de}}; Ein
+Datenschutzbeauftragter ist f"ur den Verein nicht bestellt.
+\item Zweck der Verarbeitung ist die ordentliche Verwaltung der
+Vereinsmitglieder. Die Rechtsgrundlage f"ur die Verarbeitung
+ergibt sich aus Art. 6 Abs. 1 lit. b DSGVO.
+\item Die Daten werden vom Vorstand und von mit der Verwaltung
+beauftragten Personen im Sekretariat des Vereins
+verarbeitet. Daneben k"onnen die
+Rechnungspr"ufer:innen w"ahrend der Rechnungspr"ufung Einblicke in
+die Beitrags- und Finanzverwaltung erhalten.
+\item
+Steuerrelevante Informationen werden zehn Jahre aufbewahrt.
+Entsprechend der Handelsgesetzgebung heben wir
+Mitgliedsantr"age und Stammdaten sechs Jahre nach Austritt
+des Mitglieds auf.
+\item
+Sie haben das Recht auf Auskunft "uber die betreffenden
+personenbezogenen Daten. Dar"uber hinaus haben Sie das Recht
+auf Berichtigung und Daten"ubertragbarkeit. Auf Grund der
+gesetzlich vorgeschriebenen Aufbewahrungsfristen k"onnen wir
+Ihre Daten nicht vorzeitig l"oschen. Nach Beendigung der
+Mitgliedschaft werden die Daten archiviert und nicht weiter
+verarbeitet.
+\item
+Sie haben das Recht, sich bei einer Aufsichtsbeh"orde zu
+beschweren.
+\end{itemize}
+\end{tcolorbox}
+\end{spacing}
+
+\vfill
+\tiny
+Version vom \today
+\end{document}
+
+
+
+
