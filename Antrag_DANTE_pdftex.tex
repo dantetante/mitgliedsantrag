@@ -1,4 +1,4 @@
-\documentclass[ngerman,dvips]{article}
+\documentclass[ngerman]{article}
 \usepackage[T1]{fontenc}
 \usepackage{libertine}
 \usepackage{babel}
@@ -6,7 +6,6 @@
 \usepackage{comment}
 %\begin{comment}
 \usepackage[%
-    driver=dvips,
     web={pro,
         tight,
         german,
@@ -19,31 +18,31 @@
 ]{aeb_pro}
 
 
-\DeclareDocInfo{
-    title=Antragsformular DANTE e.V.,
-    author=DANTE e.V.,
-    university=,
-    email=herbert@dante.de,
-    subject=,
-    keywords={Formularfelder mit eForms},
-    talksite=,
-    talkdate={March, 2014},
-    copyrightStatus=True,
-    copyrightNotice={Copyright (C) \the\year, DANTE e.V.},
-    copyrightInfoURL=http://www.dante.de
-}
+%\DeclareDocInfo{
+%    title=Antragsformular DANTE e.V.,
+%    author=DANTE e.V.,
+%    university=,
+%    email=herbert@dante.de,
+%    subject=,
+%    keywords={Formularfelder mit eForms},
+%    talksite=,
+%    talkdate={March, 2014},
+%    copyrightStatus=True,
+%    copyrightNotice={Copyright (C) \the\year, DANTE e.V.},
+%    copyrightInfoURL=http://www.dante.de
+%}
 
-\DeclareInitView
-{%
-layoutmag={mag=FitWidth},%
-windowoptions={showtitle},
-}
+%\DeclareInitView
+%{%
+%layoutmag={mag=FitWidth},%
+%windowoptions={showtitle},
+%}
 
-\begin{docassembly}
-\executeSave()
-\end{docassembly}
+%\begin{docassembly}
+%\executeSave()
+%\end{docassembly}
 %\end{comment}
-%\def\DANTE{{\fontfamily{dante}\selectfont DANTE}}
+\def\DANTE{{\fontfamily{dante}\selectfont DANTE}}
 \usepackage{dtklogos}
 
 %\begin{comment}
@@ -55,7 +54,7 @@ windowoptions={showtitle},
 %            usesf,
 %            pdftex
 %            ]{web}
-\usepackage[dvips]{eforms}
+\usepackage[]{eforms}
 
     \title{Antragsformular DANTE e.V.}
     \author{DANTE e.V.}
@@ -204,7 +203,7 @@ Unterschrift
 \renewcommand\thesubsection{\arabic{subsection}.}
 
 \begin{flushright}
-{\Huge\DANTE} \hfill Deutschsprachige Anwendervereinigung \TeX\ \eV\\
+{\Huge DANTE} \hfill Deutschsprachige Anwendervereinigung \TeX\ e.V.\\
 Bergheimer Straße 110a\\
 69115 Heidelberg
 \end{flushright}
