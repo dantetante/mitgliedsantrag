@@ -17,62 +17,15 @@
     attachsource={tex}
 ]{aeb_pro}
 
-
-%\DeclareDocInfo{
-%    title=Antragsformular DANTE e.V.,
-%    author=DANTE e.V.,
-%    university=,
-%    email=herbert@dante.de,
-%    subject=,
-%    keywords={Formularfelder mit eForms},
-%    talksite=,
-%    talkdate={March, 2014},
-%    copyrightStatus=True,
-%    copyrightNotice={Copyright (C) \the\year, DANTE e.V.},
-%    copyrightInfoURL=http://www.dante.de
-%}
-
-%\DeclareInitView
-%{%
-%layoutmag={mag=FitWidth},%
-%windowoptions={showtitle},
-%}
-
-%\begin{docassembly}
-%\executeSave()
-%\end{docassembly}
-%\end{comment}
-\def\DANTE{{\fontfamily{dante}\selectfont DANTE}}
 \usepackage{dtklogos}
 
-%\begin{comment}
 
 \usepackage{calc}
-%\usepackage[tight,
-%            german,
-%            nodirectory,
-%            usesf,
-%            pdftex
-%            ]{web}
-\usepackage[]{eforms}
-
-    \title{Antragsformular DANTE e.V.}
-    \author{DANTE e.V.}
-    \keywords{Formularfelder mit eForms}
-%\end{comment}
-
-
+\usepackage{eforms}
 
 \screensize{297mm}{210mm} % height, width
 \margins{.6in}{.6in}{.5in}{.5in}% left,right,top, bottom
 
-
-\usepackage{multicol}
-
-%% Definition des Eurosymbols
-\newcommand\eur{%
-{\sffamily C\makebox[0pt][l]{\kern-.70em\mbox{--}}%
-\makebox[0pt][l]{\kern-.68em\raisebox{.25ex}{--}}\,}}
 
 %% Fu{\ss}note in Tabelle
 \newcounter{myfootertablecounter}
@@ -94,8 +47,7 @@
 
 \hfill{\LARGE{Antrag zur Mitgliedschaft bei DANTE e.V.}}
 
-\pushButton[\S{S}\BC{}\BG{}\textColor{1 0 0 rg}\F{-\FPrint}\H{N}\CA{Formular am Rechner ausf\string\374llen:
-Nutzen Sie die 'tab' Funktion Ihrer Tastatur und drucken Sie das Formular dann aus.}]{name}{\textwidth}{12bp}
+\pushButton[\S{S}\BC{}\BG{}\textColor{1 0 0 rg}\F{-\FPrint}\H{N}\CA{Formular bitte am Rechner ausf\string\374llen und dann ausdrucken.}]{name}{\textwidth}{12bp}
 
 \fcolorbox{lightgray}{lightgray}{\parbox{\linewidth}{\textit{Name mit Anschrift, gewünschte Mitgliedsgruppe und Unterschrift müssen im Folgenden auf jeden Fall angegeben werden, damit der Antrag bearbeitet werden kann.}}}
 
@@ -139,19 +91,18 @@ Ich ordne mich einer der folgenden Mitgliedsgruppen zu:
 \item Institution des öffentlichen Rechts oder Forschungseinrichtung: 65 €
 \item Privatperson: 40 €
 \item Privatperson mit Ermäßigung:\myfootnotemark\, 20 € (bitte Bescheinigung beilegen)
-\item Schüler mit Ermäßigung: 15 € (bitte Bescheinigung beilegen)
+\item Schüler/in mit Ermäßigung: 15 € (bitte Bescheinigung beilegen)
 \end{itemize}
-\myfootnotetext{Eine solche Ermäßigung gibt es für Studierende, Rentner/innen, Arbeitslose, Zivil- und Wehrdienstleistende. Senden Sie bitte eine entsprechende Bescheinigung mit, da ohne sie eine nachträgliche Hochstufung in die Gruppe \textit{Privatperson} erfolgen müsste. }
+\myfootnotetext{Eine solche Ermäßigung gibt es für Studierende, Rentner/innen, Arbeitslose, Zivil- und Wehrdienstleistende. Senden Sie bitte eine entsprechende Bescheinigung mit, da ohne sie eine nachträgliche Hochstufung in die Gruppe \textit{Privatperson} erfolgen muss.}
 Die Mitgliedsbeiträge gelten für das laufende Kalenderjahr (\textit{1. Januar bis 31. Dezember}). Zahlungsaufforderungen
 werden aus Kosten- und Zeitgründen nur auf explizite Anfrage hin verschickt, während Sie eine Quittung automatisch
 erhalten. Zahlungsmodalitäten siehe Rückseite.
-\begin{multicols}{2}
 \begin{itemize}
 \item Der Beitrag wird überwiesen.
 \item Bitte schicken Sie mir eine Zahlungsaufforderung.
 \item Eine unterschriebene Einzugsermächtigung liegt bei.
 \end{itemize}
-\end{multicols}
+
 Senden Sie den ausgefüllten Antrag an:
 \begin{quote}
 DANTE
