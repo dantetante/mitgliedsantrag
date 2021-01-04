@@ -1,10 +1,9 @@
 \documentclass[ngerman]{article}
 \usepackage[T1]{fontenc}
 \usepackage{libertine}
+\usepackage[a4paper, left=1cm, right=1cm,top=1cm, bottom=1cm]{geometry}
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{comment}
-%\begin{comment}
 \usepackage[%
     web={pro,
         tight,
@@ -23,11 +22,7 @@
 \usepackage{calc}
 \usepackage{eforms}
 
-\screensize{297mm}{210mm} % height, width
-\margins{.6in}{.6in}{.5in}{.5in}% left,right,top, bottom
-
-
-%% Fu{\ss}note in Tabelle
+%% Fußnote in Tabelle
 \newcounter{myfootertablecounter}
 \newcommand\myfootnotemark{%
 \addtocounter{footnote}{1}%
@@ -39,8 +34,8 @@
 }
 
 %% Layoutparameter
-\parindent0pt
-\parskip3pt
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
 \pagestyle{empty}
 
 \begin{document}
@@ -86,8 +81,7 @@ an Mitglieder verteilt.
 \end{itemize}
 Ich ordne mich einer der folgenden Mitgliedsgruppen zu:
 \begin{itemize}
-\item Firma, die Produkte in Verbindung mit \TeX{} anbietet: 150 €
-\item Firma, die \TeX{} anwendet: 150 €
+\item Firma, die \TeX{}/\LaTeX{} anwendet oder Produkte in Verbindung mit \TeX{}/\LaTeX{} anbietet: 150 €
 \item Institution des öffentlichen Rechts oder Forschungseinrichtung: 65 €
 \item Privatperson: 40 €
 \item Privatperson mit Ermäßigung:\myfootnotemark\, 20 € (bitte Bescheinigung beilegen)
